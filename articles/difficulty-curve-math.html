@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The math behind Asteroid Dash's difficulty curve — snackplay</title>
+<meta name="description" content="The exact formulas snackplay uses to ramp up difficulty over a run, and why we picked those numbers.">
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #05070d; color: #e2e8f0; font-family: system-ui, sans-serif; padding: 24px; box-sizing: border-box; }
+  main { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 1.6rem; line-height: 1.3; }
+  h2 { font-size: 1.15rem; margin-top: 1.8em; }
+  p, li { color: #cbd5e1; line-height: 1.75; }
+  a { color: #7dd3fc; }
+  .meta { color: #94a3b8; font-size: 0.85rem; }
+  code, pre { background: #10141f; border-radius: 6px; }
+  code { padding: 1px 5px; }
+  pre { padding: 12px 16px; overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid #1f2937; }
+</style>
+</head>
+<body>
+<main>
+  <p class="meta">Dev diary · 2026-08-28</p>
+  <h1>The math behind Asteroid Dash's difficulty curve</h1>
+
+  <p>Asteroid Dash has no levels and no boss fights — the entire game is one continuous run that gets harder the longer you survive. Here's exactly how that ramp works.</p>
+
+  <h2>The two numbers that matter</h2>
+  <p>Every 10 seconds of survival, two things shift:</p>
+  <pre><code>fallSpeed = 100 * 1.05^(elapsed / 10)
+spawnInterval = max(0.5, 1.2 * 0.97^(elapsed / 10))</code></pre>
+  <p>Asteroids start falling at 100 pixels/second and speed up 5% every 10 seconds. They start spawning every 1.2 seconds and spawn slightly more often over time, down to a floor of one every half-second — past that point, more frequent spawns stopped feeling fair in testing.</p>
+
+  <table>
+    <tr><th>Time survived</th><th>Fall speed multiplier</th><th>Spawn interval</th></tr>
+    <tr><td>0s</td><td>1.00x</td><td>1.20s</td></tr>
+    <tr><td>30s</td><td>1.16x</td><td>1.10s</td></tr>
+    <tr><td>60s</td><td>1.34x</td><td>1.00s</td></tr>
+    <tr><td>120s</td><td>1.80x</td><td>0.85s</td></tr>
+  </table>
+
+  <h2>Why exponential, not linear</h2>
+  <p>A linear ramp feels flat for the first half of a run and then suddenly brutal. An exponential curve with a small per-step multiplier (1.05x, 0.97x) feels almost unchanged moment-to-moment but compounds into a real difference by the one-minute mark — which is exactly where we want a typical run to end.</p>
+
+  <h2>Scoring</h2>
+  <p>Score is <code>10 points per second survived</code> plus <code>5 points per asteroid destroyed</code>. Survival is worth more than aggression on purpose — dodging is always a valid strategy, shooting is a bonus, not a requirement.</p>
+
+  <p>Try it yourself: <a href="../games/asteroid/">Asteroid Dash</a>. Full design notes are in the <a href="building-asteroid-dash.html">previous post</a>.</p>
+</main>
+</body>
+</html>
