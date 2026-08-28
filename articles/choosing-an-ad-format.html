@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choosing an ad format that doesn't fight the games — snackplay</title>
+<meta name="description" content="How snackplay is planning to monetize without breaking the quick, disposable feel the games are built around.">
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #05070d; color: #e2e8f0; font-family: system-ui, sans-serif; padding: 24px; box-sizing: border-box; }
+  main { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 1.6rem; line-height: 1.3; }
+  h2 { font-size: 1.15rem; margin-top: 1.8em; }
+  p, li { color: #cbd5e1; line-height: 1.75; }
+  a { color: #7dd3fc; }
+  .meta { color: #94a3b8; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="meta">Dev diary · 2026-08-28</p>
+  <h1>Choosing an ad format that doesn't fight the games</h1>
+
+  <p>Every game on this site is free, and free means ad-supported. The question we spent time on wasn't whether to run ads, it was which kind, because the wrong format actively undermines what these games are trying to be.</p>
+
+  <h2>What we ruled out</h2>
+  <p>Nothing goes inside the play area. Games like Pancake Tower and Fruit Drop are built around rapid tapping across the whole screen — any ad placed near that action becomes something you hit by accident, which is both a bad experience and against the ad policies we operate under.</p>
+
+  <h2>What we're building toward instead</h2>
+  <p>Google has a format built specifically for this called H5 Games Ads, meant for exactly this kind of single-page browser game. It gives us two things we actually want:</p>
+  <ul>
+    <li><strong>Interstitials</strong> — full-screen ads shown at a natural stopping point, like the result screen after a run ends, not mid-game.</li>
+    <li><strong>Rewarded ads</strong> — entirely optional, something like "watch an ad to continue this run." You choose to watch it, you get something for it, and if you'd rather not, you just retry for free like normal.</li>
+  </ul>
+  <p>The API also handles how often ads show up on its own, so we're not hand-tuning frequency caps and guessing at what feels like too much.</p>
+
+  <h2>Where this stands right now</h2>
+  <p>We haven't turned any of this on yet — it's waiting on ad program approval, which needs real traffic and content history first (part of why this dev diary exists). The plan is ready to flip on the moment that clears.</p>
+
+  <p>Back to the games: <a href="../index.html">snackplay</a>.</p>
+</main>
+</body>
+</html>
