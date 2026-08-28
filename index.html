@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>snackplay — quick games for your spare minutes</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    background: #05070d;
+    color: #e2e8f0;
+    font-family: system-ui, sans-serif;
+    text-align: center;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+  h1 { font-size: 2rem; margin: 0; }
+  p { color: #94a3b8; max-width: 480px; margin: 0; }
+  .games { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+  .game-card {
+    display: block;
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #10141f;
+    color: #e2e8f0;
+    text-decoration: none;
+    border: 1px solid #1f2937;
+  }
+  .game-card:hover { border-color: #7dd3fc; }
+  .game-card strong { display: block; font-size: 1.1rem; margin-bottom: 6px; }
+  footer { margin-top: 40px; font-size: 0.8rem; }
+  footer a { color: #94a3b8; }
+</style>
+</head>
+<body>
+  <h1>snackplay</h1>
+  <p>Quick, free browser games you can play in a spare minute. No install, no account.</p>
+
+  <div class="games">
+    <a class="game-card" href="games/asteroid/">
+      <strong>Asteroid Dash</strong>
+      Dodge and blast your way through falling asteroids. One hit ends the run — how long can you survive?
+    </a>
+  </div>
+
+  <footer>
+    <a href="about.html">About</a> ·
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="contact.html">Contact</a>
+  </footer>
+</body>
+</html>

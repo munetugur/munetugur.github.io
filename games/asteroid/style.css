@@ -1,0 +1,27 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #05070d;
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+#game {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* 広告枠が入っても表示崩れしないよう、常に一定の高さを予約しておく。
+   広告未設置の間は空のまま(高さ0)で、審査後にタグを差し込む想定。 */
+.ad-slot {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 0;
+  pointer-events: none;
+}
