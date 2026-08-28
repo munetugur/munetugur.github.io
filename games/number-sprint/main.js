@@ -3,8 +3,10 @@
 
   var STRINGS = {
     title: 'NUMBER SPRINT',
-    tapToStart: 'TAP or press an arrow key to start',
-    controlsHint: '30 moves. Merge tiles, chase the highest score.',
+    tapToStart: 'Swipe or press an arrow key to start',
+    howToPlay1: 'Slide all tiles at once.',
+    howToPlay2: 'Same numbers merge into one.',
+    howToPlay3: '30 moves — go for the highest score.',
     score: 'SCORE',
     best: 'BEST',
     moves: 'MOVES',
@@ -340,9 +342,11 @@
       drawBoard();
       drawHud();
       drawCenterOverlay([
-        { text: STRINGS.title, size: 28, color: '#3c3a32' },
-        { text: STRINGS.tapToStart, size: 15 },
-        { text: STRINGS.controlsHint, size: 13 }
+        { text: STRINGS.title, size: 26, color: '#3c3a32' },
+        { text: STRINGS.howToPlay1, size: 14 },
+        { text: STRINGS.howToPlay2, size: 14 },
+        { text: STRINGS.howToPlay3, size: 14 },
+        { text: STRINGS.tapToStart, size: 13, color: '#a39890' }
       ]);
       return;
     }
