@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How we decide what to build next — snackplay</title>
+<meta name="description" content="Why snackplay's second game borrows a proven mechanic instead of inventing a new one, and how we design around where players actually are when they open it.">
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #05070d; color: #e2e8f0; font-family: system-ui, sans-serif; padding: 24px; box-sizing: border-box; }
+  main { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 1.6rem; line-height: 1.3; }
+  h2 { font-size: 1.15rem; margin-top: 1.8em; }
+  p, li { color: #cbd5e1; line-height: 1.75; }
+  a { color: #7dd3fc; }
+  .meta { color: #94a3b8; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="meta">Dev diary · 2026-08-28</p>
+  <h1>How we decide what to build next</h1>
+
+  <p>Our second game, Pancake Tower, is a "stack" game — tap to drop a moving block onto the one below it, miss your timing and the tower gets narrower, keep missing and it's over. That mechanic isn't new. Stacking games have been one of the most consistently popular browser/mobile genres for years, for a simple reason: one input, instant rules, and a skill ceiling that keeps rewarding precision.</p>
+
+  <h2>We're not trying to invent new genres</h2>
+  <p>For a project that plans to ship a lot of small games, chasing a completely original mechanic every time is a good way to ship nothing. Our approach instead: look at what's proven to hold attention in the "quick browser game" category, build our own version of the mechanic with original art and at least one small twist, and move on to the next one.</p>
+  <p>Pancake Tower's twist is the combo system — line up several perfect placements in a row and your score multiplier climbs, up to 3x. The base "stack" games we looked at don't reward a streak this way; it gives players a reason to slow down and aim for precision instead of just mashing to survive.</p>
+
+  <h2>Designing for a specific gap in someone's day</h2>
+  <p>The two games on this site right now are tuned for different lengths of "spare moment": Pancake Tower is built to resolve in 20–40 seconds — about the length of a kettle coming to a boil. Asteroid Dash runs longer, 30 seconds to 2 minutes, closer to a bus-stop wait.</p>
+  <p>We put that time estimate directly on each game's card on the homepage now, so picking a game is less "browse and hope" and more "I've got about a minute, what fits." It's a small thing, but it matches how we actually think people find themselves here — not sitting down to game, just filling a gap.</p>
+
+  <p>Play them both: <a href="../index.html">back to the games</a>.</p>
+</main>
+</body>
+</html>
