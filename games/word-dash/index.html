@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Word Dash — snackplay</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="hud">
+      <span id="score">WORDS 0</span>
+      <span id="timer">30s</span>
+      <span id="best">BEST 0</span>
+    </div>
+    <div id="word"></div>
+    <input id="typed" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="type it here">
+    <div id="overlay">
+      <h1 id="overlayTitle">WORD DASH</h1>
+      <p id="overlayMsg">Type each word as fast as you can. 30 seconds on the clock.</p>
+      <button id="startBtn">Tap to start</button>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

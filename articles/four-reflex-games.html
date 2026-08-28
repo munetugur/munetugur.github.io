@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Four reflex games, four different gaps in your day — snackplay</title>
+<meta name="description" content="Quick Draw, Mole Rush, Flap, and Beat Match all test reflexes — but they're tuned for different moments and different proven mechanics.">
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #05070d; color: #e2e8f0; font-family: system-ui, sans-serif; padding: 24px; box-sizing: border-box; }
+  main { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 1.6rem; line-height: 1.3; }
+  h2 { font-size: 1.1rem; margin-top: 1.6em; }
+  p, li { color: #cbd5e1; line-height: 1.75; }
+  a { color: #7dd3fc; }
+  .meta { color: #94a3b8; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="meta">Dev diary · 2026-08-28</p>
+  <h1>Four reflex games, four different gaps in your day</h1>
+
+  <p>We shipped four games in one push, and all four are, broadly, reflex tests. That wasn't laziness — reflex mechanics are some of the most reliable in casual gaming, and there's real room to differentiate inside that category by tuning what exactly you're reacting to.</p>
+
+  <h2><a href="../games/quick-draw/">Quick Draw</a> — pure reaction time, ~10-15 seconds</h2>
+  <p>No obstacle, no scoring beyond a stopwatch: wait for the screen to turn green, tap, see your time in milliseconds across three rounds. This is the shortest thing on the site on purpose — it's built for a gap so small that opening a game at all seems excessive.</p>
+
+  <h2><a href="../games/mole-rush/">Mole Rush</a> — targeting under pressure, ~20 seconds</h2>
+  <p>The classic whack-a-mole loop, fixed at a 20-second timer. The twist is a rare gold mole worth 5x points that appears for less time than a regular one — it rewards paying attention to the whole board, not just reacting to the last thing that popped up.</p>
+
+  <h2><a href="../games/flap/">Flap</a> — sustained reflexes, ~15-45 seconds</h2>
+  <p>The flap-through-gaps genre lives or dies on how the physics feel, so we spent the most tuning time here. The original addition is a near-miss bonus: thread a gap within 20 pixels of the edge and you get an extra point, which nudges you to fly tight instead of playing it safe in the middle.</p>
+
+  <h2><a href="../games/beat-match/">Beat Match</a> — timing against a rhythm, ~30-60 seconds</h2>
+  <p>This one's structurally closest to Pancake Tower — tap-on-timing — but the feel is completely different because the cue is a falling note against a fixed line rather than a swinging block. No music yet (that's a real gap, not a design choice), but the timing windows work the same way a rhythm game's would: tight for "Perfect," forgiving for "Good."</p>
+
+  <p>All four, plus the rest of the lineup: <a href="../index.html">back to snackplay</a>.</p>
+</main>
+</body>
+</html>
