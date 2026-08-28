@@ -34,7 +34,10 @@
   function viewW() { return window.innerWidth; }
   function viewH() { return window.innerHeight; }
 
-  var best = parseInt(localStorage.getItem(STORAGE_KEY) || '0', 10) || 0;
+  var best = 0;
+  try {
+    best = parseInt(localStorage.getItem(STORAGE_KEY) || '0', 10) || 0;
+  } catch (e) { /* storage unavailable (e.g. private mode): fall back to 0 */ }
 
   var STATE_READY = 'ready';
   var STATE_PLAYING = 'playing';
