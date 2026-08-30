@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://munetugur.github.io/snackplay/sitemap.xml
+Sitemap: https://munetugur.github.io/sitemap.xml
